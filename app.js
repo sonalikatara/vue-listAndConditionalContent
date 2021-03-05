@@ -3,12 +3,17 @@ const app = Vue.createApp({
         return{
             tasks: [],
             enteredTaskValue: '',
+            showList: true
         }    
     },
     methods: {
         addTask(){
             this.tasks.push(this.enteredTaskValue)
+        },
+        toggleShowList(){
+            this.showList=!this.showList;
         }
+
     }
 });
 
